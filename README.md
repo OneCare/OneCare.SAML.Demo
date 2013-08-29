@@ -86,6 +86,7 @@ OneCare.Portal.SP
 Here are some usage steps/notes:
 --------------------------------
 Start From Scratch Steps:
+-------------------------
 1. Open a browser and navigate to http://localhost/OneCare.Partner.SP (notice that you are not logged in)
 2. Click the login link
 3. Notice that you have been taken to the OneCare.Partner.IdP site and it's asking you to login.  Login as 
@@ -103,7 +104,6 @@ the Partner SP application
 
 Clear everything as follows:
 ----------------------------
-Clearing Steps:
 1. On the OneCare.Portal.SP site, click Logout
 2. Go to http://localhost/OneCare.Partner.SP and click Logout
 3. Go to http://localhost/OneCare.Partner.IdP and click Logout
@@ -112,7 +112,6 @@ Clearing Steps:
 
 To check that the association sticks:
 -------------------------------------
-Verify Association Steps:
 1. Open the browser and go to http://localhost/OneCare.Partner.SP, click Login and login to the IdP site 
 as joe@partnerIdP/joe999 (you can also confirm that you wouldn't have to do this if you hadn't taken step 
 3 above -- in that case you'd already be logged into the IdP and when you clicked the Login link in the Partner 
@@ -121,8 +120,8 @@ SP site, you would simply have been logged in as joe@partnerSP with no need to e
 5. Notice that you are now at the OneCare.Portal.SP site and are logged in as "joe".
 
 
-If you want to clear everything out and start from scratch,
------------------------------------------------------------
+To clear the association,
+-------------------------
 you will need to modify the UserDocs/1 document in the OneCarePortalSP database using Raven Studio.  In that 
 document, simply set the ExternalAccounts field to "null" and Save.  Now follow the Clearing Steps listed above 
 then start from the top.
