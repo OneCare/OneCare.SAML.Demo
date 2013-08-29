@@ -62,7 +62,7 @@ OneCare user)
 --> OneCare.Portal.SP.PartnerSSOController.Associate (GET) (when an associated user can not be found)
 --> OneCare.Portal.SP.PartnerSSOController.Associate (POST) (makes user association, redirects back to ACS)
 --> OneCare.Portal.SP.SAMLController.AssertionConsumerService (we are sent back here after the user has been 
-associated)
+associated, logs the user in)
 --> OneCare.Portal.SP.HomeController.Index (displays the user login status)
 
 
@@ -85,7 +85,7 @@ OneCare.Portal.SP
 
 Here are some usage steps/notes:
 --------------------------------
-Start From Scratch Steps
+Start From Scratch Steps:
 1. Open a browser and navigate to http://localhost/OneCare.Partner.SP (notice that you are not logged in)
 2. Click the login link
 3. Notice that you have been taken to the OneCare.Partner.IdP site and it's asking you to login.  Login as 
@@ -103,7 +103,7 @@ the Partner SP application
 
 Clear everything as follows:
 ----------------------------
-Clearing Steps
+Clearing Steps:
 1. On the OneCare.Portal.SP site, click Logout
 2. Go to http://localhost/OneCare.Partner.SP and click Logout
 3. Go to http://localhost/OneCare.Partner.IdP and click Logout
@@ -112,7 +112,7 @@ Clearing Steps
 
 To check that the association sticks:
 -------------------------------------
-Verify Association Steps
+Verify Association Steps:
 1. Open the browser and go to http://localhost/OneCare.Partner.SP, click Login and login to the IdP site 
 as joe@partnerIdP/joe999 (you can also confirm that you wouldn't have to do this if you hadn't taken step 
 3 above -- in that case you'd already be logged into the IdP and when you clicked the Login link in the Partner 
